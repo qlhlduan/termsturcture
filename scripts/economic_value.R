@@ -41,23 +41,23 @@ data <- yield[yield$Date >= "1985-01-01" & yield$Date <= "2000-12-31",]
 data <- data[121:181,c(3,6,12,14,19)]
 rownames(data) <- 1:nrow(data)
 
-res_bdns <- scan("BDNS.csv")[,1:5]
+res_bdns <- read.csv("BDNS.csv")[,1:5]
 mean_ns <- compute_grouped_mean(res_bdns)
 cov_ns <- compute_grouped_cov(res_bdns)
 
-res_aniso <- scan("Aniso.csv")[,1:5]
+res_aniso <- read.csv("Aniso.csv")[,1:5]
 mean_aniso <- compute_grouped_mean(res_aniso)
 cov_aniso <- compute_grouped_cov(res_aniso)
 
-res_st <- scan("Spatemp.csv")[,1:5]
+res_st <- read.csv("Spatemp.csv")[,1:5]
 mean_st <- compute_grouped_mean(res_st)
 cov_st <- compute_grouped_cov(res_st)
 
-res_sf <- scan("Stat.csv")[,1:5]
+res_sf <- read.csv("Stat.csv")[,1:5]
 mean_sf <- compute_grouped_mean(res_sf)
 cov_sf <- compute_grouped_cov(res_sf)
 
-res_nsf <- scan("Nonstat.csv")[,1:5]
+res_nsf <- read.csv("Nonstat.csv")[,1:5]
 mean_nsf <- compute_grouped_mean(res_nsf)
 cov_nsf <- compute_grouped_cov(res_nsf)
 
