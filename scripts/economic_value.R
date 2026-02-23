@@ -41,9 +41,9 @@ data <- yield[yield$Date >= "1985-01-01" & yield$Date <= "2000-12-31",]
 data <- data[121:181,c(3,6,12,14,19)]
 rownames(data) <- 1:nrow(data)
 
-res-bdns <- scan("BDNS.csv")[,1:5]
-mean_ns <- compute_grouped_mean(res-bdns)
-cov_ns <- compute_grouped_cov(res-bdns)
+res_bdns <- scan("BDNS.csv")[,1:5]
+mean_ns <- compute_grouped_mean(res_bdns)
+cov_ns <- compute_grouped_cov(res_bdns)
 
 res_aniso <- scan("Aniso.csv")[,1:5]
 mean_aniso <- compute_grouped_mean(res_aniso)
